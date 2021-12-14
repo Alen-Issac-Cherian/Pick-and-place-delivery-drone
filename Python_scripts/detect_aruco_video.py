@@ -18,6 +18,7 @@ ap.add_argument("-v", "--video", help="Path to the video file")
 ap.add_argument("-t", "--type", type=str, default="DICT_ARUCO_ORIGINAL", help="Type of ArUCo tag to detect")
 args = vars(ap.parse_args())
 
+
 if args["camera"].lower() == "true":
 	video = cv2.VideoCapture(0)
 	time.sleep(2.0)
