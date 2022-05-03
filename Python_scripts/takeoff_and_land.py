@@ -55,7 +55,7 @@ vehicle = connectMyCopter()
 print("About to takeoff...")
 
 vehicle.mode=VehicleMode("GUIDED")
-arm_and_takeoff(2) #Tell drone to fly 2 meters in the sky
+arm_and_takeoff(1) #Tell drone to fly 1 meter in the sky
 vehicle.mode = VehicleMode("LAND") # Once drone reaches altitude, tell it to land
 
 time.sleep(2)
