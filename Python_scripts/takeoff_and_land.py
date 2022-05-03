@@ -41,12 +41,12 @@ def arm_and_takeoff(aTargetAtlitude):
         curr_altitude = vehicle.location.global_relative_frame.alt
         print("Current Altitude : %d" %curr_altitude) #target altitude comparison
         if curr_altitude >= aTargetAtlitude* 0.95 :
+            print("Target altitude reached")
             break
         if curr_altitude == prev_altitude :
             break
         else : prev_altitude = curr_altitude
         time.sleep(1)
-    print("Target altitude reached")
     return None
 
 ####Mission
@@ -60,6 +60,7 @@ vehicle.mode = VehicleMode("LAND") # Once drone reaches altitude, tell it to lan
 
 time.sleep(2)
 
+print("vehicle mode : %s" %vehicle.mode)
 print("End of function")
 print("Arducopter version :%s" %vehicle.version)
 
