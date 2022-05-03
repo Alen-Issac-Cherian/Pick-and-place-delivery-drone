@@ -5,9 +5,9 @@ import socket
 import exceptions
 import argparse
 
-###Function definitions for mission
+####Function definitions for mission
 
-###Function to connect this script to pixhawk firmware
+####Function to connect this script to pixhawk firmware
 def connectMyCopter():
     parser = argparse.ArgumentParser(description = 'commands')
     parser.add_argument('--connect')
@@ -16,7 +16,7 @@ def connectMyCopter():
     vehicle = connect(connection_string, wait_ready = True)
     return vehicle
 
-###Function to arm the drone and takeoff
+####Function to arm the drone and takeoff
 def arm_and_takeoff(aTargetAtlitude):
     while not vehicle.is_armable:
         print("waiting for vehicle to be armable")
@@ -44,7 +44,7 @@ def arm_and_takeoff(aTargetAtlitude):
     print("Target altitude reached")
     return None
 
-###Mission
+####Mission
 
 vehicle = connectMyCopter()
 print("About to takeoff...")
