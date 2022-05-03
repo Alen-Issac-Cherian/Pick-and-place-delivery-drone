@@ -17,7 +17,7 @@ def connectMyCopter():
     return vehicle
 
 ###Function to arm the drone and takeoff
-def arm_and_takeoff(aTargetAlitude):
+def arm_and_takeoff(aTargetAtlitude):
     while not vehicle.is_armable:
         print("waiting for vehicle to be armable")
         time.sleep(1)
@@ -26,7 +26,7 @@ def arm_and_takeoff(aTargetAlitude):
     vehicle.mode = VehicleMode("GUIDED")
     while vehicle.mode != "GUIDED":
 	    print("Waiting for vehicle to enter GUIDED mode")
-        time.sleep(1)
+            time.sleep(1)
 
     #arm vehicle once GUIDED mode is confirmed
     vehicle.armed = True
