@@ -4,6 +4,7 @@ import time
 import socket
 import exceptions
 import argparse
+import sys
 
 ####Function definitions for mission
 
@@ -44,7 +45,8 @@ def arm_and_takeoff(aTargetAtlitude):
             print("Target altitude reached")
             break
         if curr_altitude == prev_altitude :
-            break
+            #break
+            sys.exit()
         else : prev_altitude = curr_altitude
         time.sleep(1)
     return None
