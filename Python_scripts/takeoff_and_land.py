@@ -53,6 +53,8 @@ def arm_and_takeoff(aTargetAtlitude):
 
 vehicle = connectMyCopter()
 print("About to takeoff...")
+print("vehicle battery : %s" %vehicle.battery)
+print("rangefinder : %s" %vehicle.rangefinder)
 
 vehicle.mode=VehicleMode("GUIDED")
 arm_and_takeoff(1) #Tell drone to fly 1 meter in the sky
@@ -60,6 +62,7 @@ vehicle.mode = VehicleMode("LAND") # Once drone reaches altitude, tell it to lan
 
 time.sleep(2)
 
+vehicle.armed = False
 print("vehicle mode : %s" %vehicle.mode)
 print("End of function")
 print("Arducopter version :%s" %vehicle.version)
