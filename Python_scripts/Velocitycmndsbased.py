@@ -97,7 +97,7 @@ while c<2
 	c=c+1
 time.sleep(2)
 
-vehicle.mode=VehicleMOde("RTL")
+vehicle.mode=VehicleMode("RTL")
 
 
 print("End of function")
