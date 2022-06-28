@@ -64,7 +64,7 @@ def set_velocity_body(Vx,Vy,Vz) :
 	
 	msg = vehicle.message_factory.net_position_target_local_ned_encode(
 		0,
-		0,0
+		0,0,
 		mavutil.mavlink.MAV_FRAME_BODY_OFFSET_NED,
 		0b0000111111000111, #bitmask
 		0,0,0, #position
@@ -93,7 +93,7 @@ time.sleep(2)
 
 c=0
 
-while c<2
+while c<2:
 	set_velocity_body(-1,0,0)
 	print("Heads 1 unit south")
 	time.sleep(1)
