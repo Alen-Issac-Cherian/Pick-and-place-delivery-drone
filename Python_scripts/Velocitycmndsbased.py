@@ -76,7 +76,7 @@ def set_velocity_body(Vx,Vy,Vz) :
 vehicle=connectMyCopter()
 print("About to takeoff...")
 
-arm_and_takeoff(20)
+arm_and_takeoff(2)
 
 c=0
 
